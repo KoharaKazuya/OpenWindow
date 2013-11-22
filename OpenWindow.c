@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     }
 
     HWND hWin = FindWindow(argv[1], NULL);
-    if (argc <= ARGNUM && hWin) {
+    if (hWin) {
         SetForegroundWindow(hWin);
     } else {
         ShellExecute(NULL, "open", argv[2], args, path, SW_SHOWDEFAULT);
